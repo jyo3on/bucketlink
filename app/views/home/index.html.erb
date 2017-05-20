@@ -22,13 +22,15 @@
   <div class="card-columns">
    <!-- item each do -->
    <% @items.each do |x| %>
-     <div class="card">
-       <%= image_tag(x.img.to_s, class: 'card-img-top img-fluid') %>
-       <div class="card-block">
-         <h4 class="card-title"><%= x.title %></h4>
-         <p class="card-text"><%= x.content %></p>
+     <%= link_to(x) do %>
+       <div class="card">
+         <%= image_tag(x.img.to_s, class: 'card-img-top img-fluid') %>
+         <div class="card-block">
+           <h4 class="card-title"><%= x.title %></h4>
+           <p class="card-text"><%= x.content %></p>
+         </div>
        </div>
-     </div>
+     <% end %>
    <% end %>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Cras justo odio</li>
