@@ -2,5 +2,8 @@
   <%= f.text_field :title, required: true, class: 'form-control', placeholder:'title'%>
 </div>
 <div class="col-md-6 form-group">
-  <%= f.text_area :content, required: true, class: 'form-control', placeholder:'content' %>
+ <%= f.text_area :content, required: true, class: 'form-control', placeholder:'content' %>
+</div>
+<div class="col-md-6 form-group">
+ <%= f.file_field :img, required: true, class: 'form-control', placeholder:'image' %>
 </div>

@@ -1,12 +1,22 @@
 class ItemsController < ApplicationController
+  def show
+    @item = Item.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render xml: @item }
+    end
+  end
+
   def new
-     @item = Item.new
+    @item = Item.new
 
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render xml: @item }
     end
   end
+
   def create
     @item = Item.new(item_params)
 
@@ -21,7 +31,11 @@ class ItemsController < ApplicationController
       end
     end
   end
+
+  private
+
   def item_params
     params.require(:item).permit(:title, :img, :content)
   end
+
 end
