@@ -2,18 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* category */
+
 @media screen and (max-width: 767px) {
   #category-list { 
     overflow: auto;
     width: 100%;
     .btn-group {
-      width: 1320px;
+      width: 990px;
       padding: 0;
-      button {
-        display: inline-block;
-        width: 255px;
-        vertical-align: top;
-      }
     }
   }
+}
+
+#category-list {
+  button.active {
+    background-color: #40c5ee;
+    font-weight: 700;
+    color: #fff;
+  }
+  button {
+    width: 90px;
+    height: 75px;
+    font-size: 0.9rem;
+    border-color: #efefef;
+    border-radius: 0;
+    vertical-align: top;
+    &:hover {
+      color: #fff;
+    }
+  }
+
 }
