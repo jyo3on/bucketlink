@@ -14,10 +14,43 @@
  *= require_self
  */
 
+
+/* Common Styles */
+
+html {
+  font-size: 14px; /* 1rem = 14px */
+  color: #666;
+}
+
+a, a.active {
+  color: #666;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* Navbar */
+
 #search-toggle {
   display: none;
 }
 
+.nav:first-of-type {
+  height: 65px;
+}
+
 .nav {
+  height: 50px;
   border-bottom: 1px solid #efefef;
+  font-weight: 700;
+}
+
+.nav-brand > img {
+  height: 50px;
+}
+
+#search-btn {
+  background-color: transparent;
+  border-right: 1px solid #ddd;
 }

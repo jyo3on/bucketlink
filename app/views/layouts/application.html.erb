@@ -11,33 +11,44 @@
     
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    
   </head>
 
   <body>
-    <header id="header" class="container-fluid">
+    <header id="header">
      <nav>
-       <ul class="nav justify-content-between">
-         <li class="nav-item">
-          <button type="button" class="btn btn-outline-secondary">글쓰기</button>
+       <ul class="nav justify-content-between align-items-center">
+        <li class="nav-item pl-3">
+          <%= link_to new_item_path, class: "btn btn-outline-secondary" do %>
+            + 새 아이템
+          <% end %>
         </li>
         <li class="nav-item">
-          <h1>
-            <a href="" class="nav-brand">
-              <img src="logo.png" alt="logo"/>
-            </a>
+          <h1 class="m-0">
+            <%= link_to home_index_path, class: "nav-brand" do %>
+              <%= image_tag asset_path('logo.png'), alt: "로고" %>
+            <% end %>
           </h1>
         </li>
-        <li class="nav-item">
+        <li class="nav-item pr-3 d-flex align-items-center">
+<!--
           <form class="d-inline-block">
             <input id="search-toggle" class="form-control mr-sm-2" type="text" placeholder="검색">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span class="sr-only">Search</span></button>
+            <button id="search-btn" class="btn my-2 my-sm-0" type="submit">
+              <i class="fa fa-search"></i>
+              <span class="sr-only">검색</span>
+            </button>
           </form>
-          <a class="d-inline-block" href=""> 유저명 <%= %></a>
+-->
+          <%= link_to home_index_path, class: "d-flex align-items-center" do %> 
+            <i class="fa fa-user-circle-o fa-2x mr-2"></i> 이영민 님
+          <% end %>
         </li>
        </ul>
-      <ul class="nav justify-content-center">
+      <ul class="nav justify-content-center align-items-center">
           <li class="nav-item">
-            <a class="nav-link active">홈</a>
+            <%= link_to home_index_path, class: "nav-link active" do %> 홈 <% end %>
           </li>
           <li class="nav-item">
             <a class="nav-link">실천스토리</a>
@@ -48,6 +59,9 @@
        </ul>
       </nav>
     </header>
+    
     <%= yield %>
+    
+    <script src="https://use.fontawesome.com/742769ec72.js"></script>
   </body>
 </html>
