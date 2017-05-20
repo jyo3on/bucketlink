@@ -56,7 +56,11 @@ a:hover, a:focus, button:hover, button:focus {
   height: 50px;
 }
 
-#search-btn {
-  background-color: transparent;
-  border-right: 1px solid #ddd;
+.nav-link:hover, .nav-link:focus, .nav-link.active {
+  color: #40c5ee;
 }
+
+#user a {
+  color: #bbb;
+}
+
