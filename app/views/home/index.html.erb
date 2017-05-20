@@ -2,17 +2,17 @@
  <section class="container-fluid d-flex justify-content-center align-items-center">
   <div id="category-list">
     <div class="btn-group my-4" role="group">
-      <button type="button" class="btn btn-secondary active">전체</button>
-      <button type="button" class="btn btn-secondary">인기 아이템</button>
-      <button type="button" class="btn btn-secondary">여행</button>
-      <button type="button" class="btn btn-secondary">음식</button>
-      <button type="button" class="btn btn-secondary">패션 및 뷰티</button>
-      <button type="button" class="btn btn-secondary">인테리어</button>
-      <button type="button" class="btn btn-secondary">스포츠/레저</button>
-      <button type="button" class="btn btn-secondary">문화생활</button>
-      <button type="button" class="btn btn-secondary">지식습득</button>
-      <button type="button" class="btn btn-secondary">역사</button>
-      <button type="button" class="btn btn-secondary">기타</button>
+      <button type="button" class="btn btn-secondary active"><i class="fa fa-braille fa-lg mb-2"></i><br>전체</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-trophy fa-lg mb-2"></i><br>인기 아이템</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-free-code-camp fa-lg mb-2"></i><br>여행</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-braille fa-lg mb-2"></i><br>음식</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-low-vision fa-lg mb-2"></i><br>패션 및 뷰티</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-files-o fa-lg mb-2"></i><br>인테리어</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-connectdevelop fa-lg mb-2"></i><br>스포츠/레저</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-television fa-lg mb-2"></i><br>문화생활</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-credit-card fa-lg mb-2"></i><br>지식습득</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-tty fa-lg mb-2"></i><br>음악</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-leanpub fa-lg mb-2"></i><br>기타</button>
     </div>
   </div>
 </section>
@@ -20,21 +20,38 @@
 <!-- 아이템 리스트 -->
 <section class="container">
   <div class="card-columns">
-   <!-- item each do -->
-     <% @items.each do |x| %>
+   <!-- 새로 만들어진 아이템 -->
+   <% @items.each do |x| %>
+     <%= link_to(x) do %>
        <div class="card">
          <%= image_tag(x.img.to_s, class: 'card-img-top img-fluid') %>
          <div class="card-block">
-           <h4 class="card-title"><%= x.title %></h4>
+           <h5 class="card-title"><strong><%= x.title %></strong></h5>
            <p class="card-text"><%= x.content %></p>
          </div>
+      <% end %>
+        <div class="add-btn">
+           <div class="card-block pt-0 add-btn">
+            <hr class="mt-0">
+             <div class="text-center text-blue">
+               <i class="fa fa-plus"></i> <strong>내 리스트에 추가</strong> &nbsp; </div>
+           </div>
+         </div>
        </div>
-     <% end %>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-      </ul>
+   <% end %>
+      
+      <!-- Seed 대용 -->
+      <div class="card">
+         <%= image_tag asset_path('img-1.png'), class: 'card-img-top img-fluid', alt: "뜨개질" %>
+         <div class="card-block">
+           <h5 class="card-title"><strong>직접 뜨개질한 목도리로 겨울나기</strong></h5>
+           <p class="card-text">매칭기업 11개</p>
+        </div>
+         <div class="card-block text-center added">
+               <i class="fa fa-list"></i> <strong>내 리스트에 추가됨</strong> &nbsp; </div>
+         </div>
+       </div>
+       
       <div class="card-block">
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
@@ -42,3 +59,9 @@
     </div>
   </div>
 </section>
+
+<script>
+  $(".add-btn").click(function() {
+      $(this).html( '<div class="card-block text-center added"><i class="fa fa-list"></i> <strong>내 리스트에 추가됨</strong> &nbsp; </div></div>' );
+  });
+</script>

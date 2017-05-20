@@ -17,7 +17,7 @@
 
 /* Common Styles */
 
-html {
+html, body {
   font-size: 14px; /* 1rem = 14px */
   color: #666;
 }
@@ -34,6 +34,10 @@ a:hover, a:focus, button:hover, button:focus {
 ::-webkit-scrollbar {
   width: 0px;
   display: none;  
+}
+
+.text-blue {
+  color: #40c5ee;
 }
 
 /* Navbar */
