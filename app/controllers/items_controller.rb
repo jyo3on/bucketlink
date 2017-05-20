@@ -19,6 +19,9 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    uploader = ImgUploader.new
+    uploader.store!(params[:img])
+    uploader.retrieve_from_store!('my_file.png')
 
     respond_to do |format|
       if @item.save
