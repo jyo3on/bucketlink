@@ -1,0 +1,15 @@
+ <div class="container">
+   <div class="row">
+     <div class="col-xs-12 col-md-10 col-md-offset-1">
+       <%= form_for @item do |f| %>
+         <%= render partial: 'form', locals: { f: f } %>
+         <br><br>
+         <div class="text-center">
+           <%= link_to "back", :back, class: 'btn' %>
+           <%= f.submit "submit", class: 'btn' %>
+         </div>
+       <% end %>
+     </div>
+   </div>
+ </div>
+
