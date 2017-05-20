@@ -1,3 +1,13 @@
-<%= @item.title %>
-<%= @item.content %>
-<%= image_tag(@item.img.to_s) %>
+<section>
+  <header class="cover">
+    <%= image_tag(@item.img.to_s, class: "img-full") %>
+    <div class="cover-text">
+      <div class="container">
+        <h2><%= @item.title %></h2>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <%= @item.content %>
+  </main>
+</section>

@@ -39,3 +39,16 @@
   color: #fff;
   background-color: #40c5ee;
 }
+
+img.card-img-top.img-fluid {
+  transition: .5s opacity;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: .5s opacity;
+  }
+}
+
+.card {
+  margin-bottom: 1.5rem;
+}

@@ -26,7 +26,7 @@ a, a.active {
   color: #666;
 }
 
-a:hover, a:focus, button:hover, button:focus {
+a:hover, a:focus, button:hover, button:focus, .btn:hover, .add-btn:hover {
   text-decoration: none;
   cursor: pointer;
 }
@@ -38,6 +38,16 @@ a:hover, a:focus, button:hover, button:focus {
 
 .text-blue {
   color: #40c5ee;
+}
+
+.btn-blue {
+  color: #fff;
+  background-color: #40c5ee;
+  border-color: #40c5ee;
+}
+
+.img-full {
+  width: 100%;
 }
 
 /* Navbar */
@@ -68,3 +78,50 @@ a:hover, a:focus, button:hover, button:focus {
   color: #bbb;
 }
 
+/* form */
+
+.form-group .form-control {
+  border: 2px solid #efefef;
+  border-radius: 0;
+  transition: .5s border;
+}
+input.form-control {
+  height: 45px;
+}
+
+textarea.form-control {
+  height: 180px;
+}
+
+.form-group .form-control:focus {
+  border: 2px solid #40c5ee;
+  transition: .5s border;
+}
+
+.form-img {
+  border: 2px solid #efefef;
+  position: relative;
+  height: 300px;
+}
+
+.form-img .form-control {
+  height: 100%;
+  opacity: 0;
+  z-index: 1300;
+  cursor: pointer;
+}
+
+.form-img .form-info {
+  position: absolute;
+  flex-direction: column;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.form-img .form-info img {
+  height: 100%;
+}

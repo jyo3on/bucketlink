@@ -24,40 +24,124 @@
    <% @items.each do |x| %>
      <%= link_to(x) do %>
        <div class="card">
-         <%= image_tag(x.img.to_s, class: 'card-img-top img-fluid') %>
+         <%= image_tag(x.img.to_s, class: 'card-img-top img-fluid img-full') %>
          <div class="card-block">
            <h5 class="card-title"><strong><%= x.title %></strong></h5>
-           <p class="card-text"><%= x.content %></p>
+           <p class="card-text row">
+             <span class="col-5">실천스토리 0명</span>
+             <span class="col-7 text-right text-blue"><i class="fa fa-heart"></i> 등록 1명 &nbsp; <i class="fa fa-list"></i> 매칭 20개</span>
+           </p>
          </div>
       <% end %>
-        <div class="add-btn">
-           <div class="card-block pt-0 add-btn">
-            <hr class="mt-0">
-             <div class="text-center text-blue">
-               <i class="fa fa-plus"></i> <strong>내 리스트에 추가</strong> &nbsp; </div>
-           </div>
+        <div class="card-block text-center added">
+             <i class="fa fa-list"></i> <strong>내 리스트에 추가됨</strong> &nbsp; 
          </div>
        </div>
    <% end %>
       
       <!-- Seed 대용 -->
       <div class="card">
-         <%= image_tag asset_path('img-1.png'), class: 'card-img-top img-fluid', alt: "뜨개질" %>
+         <%= image_tag asset_path('img-0.png'), class: 'card-img-top img-fluid img-full', alt: "기타" %>
+         <div class="card-block">
+           <h5 class="card-title"><strong>이색 반려동물 키우기</strong></h5>
+           <p class="card-text row">
+             <span class="col-5">실천스토리 16명</span>
+             <span class="col-7 text-right text-blue"><i class="fa fa-heart"></i> 등록 32명 &nbsp; <i class="fa fa-list"></i> 매칭 10개</span>
+           </p>
+         </div>
+         <div class="add-btn">
+           <div class="card-block pt-0 add-btn">
+            <hr class="mt-0">
+             <div class="text-center text-blue">
+               <i class="fa fa-plus"></i> <strong>내 리스트에 추가</strong> &nbsp; </div>
+           </div>
+         </div>
+      </div>
+      
+      <div class="card">
+         <%= image_tag asset_path('img-1.png'), class: 'card-img-top img-fluid img-full', alt: "뜨개질" %>
          <div class="card-block">
            <h5 class="card-title"><strong>직접 뜨개질한 목도리로 겨울나기</strong></h5>
-           <p class="card-text">매칭기업 11개</p>
-        </div>
-         <div class="card-block text-center added">
-               <i class="fa fa-list"></i> <strong>내 리스트에 추가됨</strong> &nbsp; </div>
+           <p class="card-text row">
+             <span class="col-5">실천스토리 12명</span>
+             <span class="col-7 text-right text-blue"><i class="fa fa-heart"></i> 등록 20명 &nbsp; <i class="fa fa-list"></i> 매칭 11개</span>
+           </p>
          </div>
-       </div>
-       
-      <div class="card-block">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+         <div class="add-btn">
+           <div class="card-block pt-0 add-btn">
+            <hr class="mt-0">
+             <div class="text-center text-blue">
+               <i class="fa fa-plus"></i> <strong>내 리스트에 추가</strong> &nbsp; </div>
+           </div>
+         </div>
       </div>
-    </div>
-  </div>
+      
+      <div class="card">
+         <%= image_tag asset_path('img-2.png'), class: 'card-img-top img-fluid img-full', alt: "기타" %>
+         <div class="card-block">
+           <h5 class="card-title"><strong>나만의 노래 작곡하기</strong></h5>
+           <p class="card-text row">
+             <span class="col-5">실천스토리 30명</span>
+             <span class="col-7 text-right text-blue"><i class="fa fa-heart"></i> 등록 52명 &nbsp; <i class="fa fa-list"></i> 매칭 20개</span>
+           </p>
+         </div>
+         <div class="card-block text-center added">
+             <i class="fa fa-list"></i> <strong>내 리스트에 추가됨</strong> &nbsp; 
+         </div>
+      </div>
+      <div class="card">
+         <%= image_tag asset_path('img-3.png'), class: 'card-img-top img-fluid img-full', alt: "기타" %>
+         <div class="card-block">
+           <h5 class="card-title"><strong>번지점프 하기</strong></h5>
+           <p class="card-text row">
+             <span class="col-5">실천스토리 121명</span>
+             <span class="col-7 text-right text-blue"><i class="fa fa-heart"></i> 등록 322명 &nbsp; <i class="fa fa-list"></i> 매칭 40개</span>
+           </p>
+         </div>
+         <div class="add-btn">
+           <div class="card-block pt-0 add-btn">
+            <hr class="mt-0">
+             <div class="text-center text-blue">
+               <i class="fa fa-plus"></i> <strong>내 리스트에 추가</strong> &nbsp; </div>
+           </div>
+         </div>
+      </div>
+      <div class="card">
+         <%= image_tag asset_path('img-4.png'), class: 'card-img-top img-fluid img-full', alt: "기타" %>
+         <div class="card-block">
+           <h5 class="card-title"><strong>내 방 예쁘게 꾸미기</strong></h5>
+           <p class="card-text row">
+             <span class="col-5">실천스토리 35명</span>
+             <span class="col-7 text-right text-blue"><i class="fa fa-heart"></i> 등록 52명 &nbsp; <i class="fa fa-list"></i> 매칭 15개</span>
+           </p>
+         </div>
+         <div class="add-btn">
+           <div class="card-block pt-0 add-btn">
+            <hr class="mt-0">
+             <div class="text-center text-blue">
+               <i class="fa fa-plus"></i> <strong>내 리스트에 추가</strong> &nbsp; </div>
+           </div>
+         </div>
+      </div>
+      <div class="card">
+         <%= image_tag asset_path('img-5.jpg'), class: 'card-img-top img-fluid img-full', alt: "기타" %>
+         <div class="card-block">
+           <h5 class="card-title"><strong>우주 여행 가기</strong></h5>
+           <p class="card-text row">
+             <span class="col-5">실천스토리 0명</span>
+             <span class="col-7 text-right text-blue"><i class="fa fa-heart"></i> 등록 64명 &nbsp; <i class="fa fa-list"></i> 매칭 2개</span>
+           </p>
+         </div>
+         <div class="add-btn">
+           <div class="card-block pt-0 add-btn">
+            <hr class="mt-0">
+             <div class="text-center text-blue">
+               <i class="fa fa-plus"></i> <strong>내 리스트에 추가</strong> &nbsp; </div>
+           </div>
+         </div>
+      </div>
+      
+   </div>
 </section>
 
 <script>
