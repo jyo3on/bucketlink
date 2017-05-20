@@ -1,3 +1,19 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@media screen and (max-width: 767px) {
+  #category-list { 
+    overflow: auto;
+    width: 100%;
+    .btn-group {
+      width: 1320px;
+      padding: 0;
+      button {
+        display: inline-block;
+        width: 255px;
+        vertical-align: top;
+      }
+    }
+  }
+}
