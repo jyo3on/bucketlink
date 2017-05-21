@@ -1,0 +1,128 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+/* Common Styles */
+
+
+html, body {
+  font-size: 14px; /* 1rem = 14px */
+  color: #666;
+}
+
+a, a.active {
+  color: #666;
+}
+
+a:hover, a:focus, button:hover, button:focus, .btn:hover, .add-btn:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  display: none;  
+}
+
+.text-blue {
+  color: #40c5ee;
+}
+
+.btn-blue {
+  color: #fff;
+  background-color: #40c5ee;
+  border-color: #40c5ee;
+}
+
+.img-full {
+  width: 100%;
+}
+
+/* Navbar */
+
+#search-toggle {
+  display: none;
+}
+
+.nav:first-of-type {
+  height: 65px;
+}
+
+.nav {
+  height: 50px;
+  border-bottom: 1px solid #efefef;
+  font-weight: 700;
+}
+
+.nav-brand > img {
+  height: 50px;
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link.active {
+  color: #40c5ee;
+}
+
+#user a {
+  color: #bbb;
+}
+
+/* form */
+
+.form-group .form-control {
+  border: 2px solid #efefef;
+  border-radius: 0;
+  transition: .5s border;
+}
+input.form-control {
+  height: 45px;
+}
+
+textarea.form-control {
+  height: 180px;
+}
+
+.form-group .form-control:focus {
+  border: 2px solid #40c5ee;
+  transition: .5s border;
+}
+
+.form-img {
+  border: 2px solid #efefef;
+  position: relative;
+  height: 300px;
+}
+
+.form-img .form-control {
+  height: 100%;
+  opacity: 0;
+  z-index: 1300;
+  cursor: pointer;
+}
+
+.form-img .form-info {
+  position: absolute;
+  flex-direction: column;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.form-img .form-info img {
+  height: 100%;
+}

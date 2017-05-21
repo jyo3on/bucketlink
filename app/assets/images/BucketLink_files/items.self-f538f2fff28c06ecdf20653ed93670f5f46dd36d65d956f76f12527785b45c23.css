@@ -1,0 +1,29 @@
+/* line 5, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/items.scss */
+.cover {
+  position: relative;
+  max-height: 400px;
+  overflow: hidden;
+}
+/* line 9, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/items.scss */
+.cover .cover-text {
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+  font-size: 0.9em;
+  color: #fff;
+}
+/* line 15, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/items.scss */
+.cover .cover-text hr {
+  border-color: #40c5ee;
+}
+/* line 19, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/items.scss */
+.cover img {
+  -webkit-filter: brightness(0.5);
+  filter: brightness(0.5);
+  transition: 5s transform;
+}
+/* line 23, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/items.scss */
+.cover img:hover {
+  transform: scale(1.1);
+  transition: 5s transform;
+}
