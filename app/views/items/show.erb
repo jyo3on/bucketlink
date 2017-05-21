@@ -16,6 +16,11 @@
     <div class="col-12 col-md-8">
      <div class="card card-outline-secondary mb-3">
         <div class="card-block">
+          <p>
+            <%= link_to buckets_path, class: "d-flex align-items-center" do %> 
+              <i class="fa fa-user-circle-o fa-2x mr-2"></i> 이영민 님 &nbsp; | &nbsp; <small class="text-muted">2017.05.12 오전 12:30</small>
+            <% end %>
+          </p>
           <p> <%= @item.content %>.</p>
           <p class="mb-2"><strong>SNS에 공유</strong> 8회</p>
           <div class="row">
@@ -30,12 +35,45 @@
       <div class="card card-outline-secondary mb-3">
         <div class="card-block">
           <h4 class="card-title">실천을 함께할 파트너</h4>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          <table class="partner-match table table-hover">
+            <thead class="border-top-0">
+              <tr>
+                <th class="border-top-0">#</th>
+                <th class="border-top-0">업체명</th>
+                <th class="border-top-0">제공내용</th>
+                <th class="border-top-0 text-right">이용안내</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td class="row">
+                  <button class="col-5 ml-2 btn btn-outline-secondary">보러가기</button>
+                  <button class="col-5 ml-2 btn btn-blue">간편거래</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td class="row">
+                  <button class="col-5 ml-2 btn btn-outline-secondary">보러가기</button>
+                  <button class="col-5 ml-2 btn btn-blue">간편거래</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td class="row">
+                  <button class="col-5 ml-2 btn btn-outline-secondary">보러가기</button>
+                  <button class="col-5 ml-2 btn btn-blue">간편거래</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <footer class="text-right text-blue mt-3">원하시는 매칭이 없나요? <b>직접 검색해보세요! >></b></footer>
         </div>
       </div>
     </div>
