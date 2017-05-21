@@ -36,6 +36,18 @@ class ItemsController < ApplicationController
       end
     end
   end
+  def like
+    @item = Item.find(params[:id])
+
+    if @item.realizers.include? current_user
+      like = Like.where(realizee: @item, realizer: current_user)
+      like.destroy_all
+      redirect_to :back
+    else
+      @item.realizers << current_user
+      redirect_to :back
+    end
+  end
 
   private
 

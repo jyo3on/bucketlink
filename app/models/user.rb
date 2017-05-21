@@ -5,4 +5,5 @@ class User < ApplicationRecord
   has_many :storys
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  has_many :realizees, class_name: :Item, through: :likes
 end

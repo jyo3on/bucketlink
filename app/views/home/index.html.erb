@@ -31,14 +31,11 @@
              <span class="col-5">실천스토리 0명</span>
              <span class="col-7 text-right text-blue"><i class="fa fa-heart"></i> 등록 1명 &nbsp; <i class="fa fa-list"></i> 매칭 20개</span>
            </p>
+         <% end %>
          </div>
-      <% end %>
-        <div class="card-block text-center added">
-             <i class="fa fa-list"></i> <strong>내 리스트에 추가됨</strong> &nbsp; 
-         </div>
+           <%= render partial: 'items/like', locals: { item: x } %>
        </div>
    <% end %>
-      
       <!-- Seed 대용 -->
       <div class="card">
          <%= image_tag asset_path('img-0.png'), class: 'card-img-top img-fluid img-full', alt: "기타" %>

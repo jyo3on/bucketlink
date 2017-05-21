@@ -1,0 +1,15 @@
+<% if item.realizers.empty? %>
+  <%= link_to like_path(item) do  %>
+    <div class="text-center text-blue">
+      <br />
+      <i class="fa fa-plus"></i> <strong>내 리스트에 추가</strong> &nbsp;
+      <br /><br />
+    </div>
+  <% end %>
+<% else %>
+  <%= link_to like_path(item) do  %>
+    <div class="card-block text-center added">
+      <i class="fa fa-list"></i> <strong>내 리스트에 추가됨</strong> &nbsp; 
+    </div>
+  <% end %>
+<% end %>
