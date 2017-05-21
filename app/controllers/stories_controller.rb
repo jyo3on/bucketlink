@@ -1,4 +1,5 @@
 class StoriesController < ApplicationController
+  before_action :authenticate_user!
   def new
     @item = Item.find(params[:item_id])
     @story = Story.new
@@ -11,6 +12,7 @@ class StoriesController < ApplicationController
   def create
     @item = Item.find(params[:item_id])
     @story = @item.storys.new(story_params)
+    @story.user_id = current_user.id
 
     respond_to do |format|
       if @story.save
@@ -34,7 +36,7 @@ class StoriesController < ApplicationController
 
   private
   def story_params
-    params.require(:story).permit(:title, :img, :content, :item_id)
+    params.require(:story).permit(:title, :img, :content, :item_id, :user_id)
   end
 end
 
