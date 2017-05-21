@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!
   def show
     @item = Item.find(params[:id])
 
@@ -22,6 +23,7 @@ class ItemsController < ApplicationController
     uploader = ImgUploader.new
     uploader.store!(params[:img])
     uploader.retrieve_from_store!('my_file.png')
+    @item.user_id = current_user.id
 
     respond_to do |format|
       if @item.save
@@ -38,7 +40,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:title, :img, :content)
+    params.require(:item).permit(:title, :img, :content, :user_id)
   end
 
 end
