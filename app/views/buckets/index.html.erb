@@ -13,16 +13,22 @@
               </tr>
             </thead>
             <tbody>
+              <% @items.each do |x| %>
               <tr>
-                <th scope="row">1</th>
+                <th scope="row"><%= x.id %></th>
                 <td></td>
-                <td>실물을 잘 담아내는 화보 촬영 하기</td>
+                <td><%= x.title %></td>
                 <td class="row"> 
-                  <button class="col-5 ml-2 btn btn-outline-secondary">보러가기</button>
-                  <button class="col-5 ml-2 btn btn-blue disabled">실천스토리</button>
+                  <button class="col-5 ml-2 btn btn-outline-secondary">
+                    <%= link_to item_path(x) do %>
+                      보러가기
+                    <% end %>
+                  </button>
+                    <button class="col-5 ml-2 btn btn-blue disabled">실천스토리</button>
                 </td>
               </tr>
               <tr>
+              <% end %>
                 <th scope="row">2</th>
                 <td>V</td>
                 <td>결혼 해보기 (?)</td>
