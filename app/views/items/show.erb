@@ -1,12 +1,12 @@
 <section>
   <header class="cover">
     <%= image_tag(@item.img.to_s, class: "img-full") %>
-    <div class="cover-text">
+    <div class="cover-text ml-md-5">
       <div class="container">
         <h2 class="col-12 col-md-8"><%= @item.title %></h2>
-        <hr class="col-12 col-md-4 my-2 mr-auto ml-3">
+        <hr class="col-10 col-md-4 my-2 mr-auto ml-3">
         <p class="col-12 col-md-8 text-blue">
-          <i class="fa fa-list"></i>4 | 버킷리스트에 등록한 사람 12명 | 실천스토리 5개
+          <i class="fa fa-list"></i> 4 | 버킷리스트에 등록한 사람 12명 | 실천스토리 5개
         </p>
       </div>
     </div>
@@ -14,26 +14,39 @@
   <main class="container mt-4">
    <div class="row">
     <div class="col-12 col-md-8">
-     <div class="card card-outline-secondary mb-3 text-center">
-       <div class="card-block">
-          <p> <%= @item.content %>.</p>
-          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-        </div>
+     <div class="card card-outline-secondary mb-3">
         <div class="card-block">
-          <p><strong>스크랩</strong> 8회</p>
-          <span class="fa fa-facebook"></span>
+          <p> <%= @item.content %>.</p>
+          <p class="mb-2"><strong>SNS에 공유</strong> 8회</p>
+          <div class="row">
+            <button type="button" class="col-2 ml-3 btn btn-primary d-inline-block"><i class="fa fa-facebook"></i></button>
+            <button type="button" class="col-2 ml-2 btn btn-info d-inline-block"><i class="fa fa-twitter"></i></button>
+            <button type="button" class="col-2 ml-2 btn btn-success d-inline-block"><strong>N</strong></button>
+            <button type="button" class="col-2 ml-2 btn btn-warning d-inline-block"><i class="fa fa-commenting"></i></button>
+            <button type="button" class="col-2 ml-2 btn btn-danger d-inline-block"><i class="fa fa-google"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="card card-outline-secondary mb-3">
+        <div class="card-block">
+          <h4 class="card-title">실천을 함께할 파트너</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
         </div>
       </div>
     </div>
     <div class="col-12 col-md-4">
-      <div class="card card-outline-secondary mb-3 text-center">
+      <div class="card card-outline-secondary mb-3">
         <div class="card-block">
-          <h4 class="card-title">Card title</h4>
+          <h4 class="card-title">실천을 함께할 파트너</h4>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
-   </div>
   </main>
 </section>

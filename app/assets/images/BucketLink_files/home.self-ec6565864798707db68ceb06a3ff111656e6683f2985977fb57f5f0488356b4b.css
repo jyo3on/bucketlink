@@ -1,0 +1,55 @@
+/* category */
+@media screen and (max-width: 767px) {
+  /* line 9, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/home.scss */
+  #category-list {
+    overflow: auto;
+    width: 100%;
+  }
+  /* line 12, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/home.scss */
+  #category-list .btn-group {
+    width: 990px;
+    padding: 0;
+  }
+}
+/* line 20, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/home.scss */
+#category-list button.active {
+  background-color: #40c5ee;
+  font-weight: 700;
+  color: #fff;
+}
+/* line 25, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/home.scss */
+#category-list button {
+  width: 90px;
+  height: 75px;
+  font-size: 0.9rem;
+  color: #888;
+  border-color: #efefef;
+  border-radius: 0;
+  vertical-align: top;
+}
+/* line 33, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/home.scss */
+#category-list button:hover {
+  color: #fff;
+}
+
+/* line 39, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/home.scss */
+.added {
+  color: #fff;
+  background-color: #40c5ee;
+}
+
+/* line 44, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/home.scss */
+img.card-img-top.img-fluid {
+  transition: .5s opacity;
+}
+/* line 46, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/home.scss */
+img.card-img-top.img-fluid:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: .5s opacity;
+}
+
+/* line 53, /Users/HOME/Desktop/dev/bucketlink/app/assets/stylesheets/home.scss */
+.card {
+  margin-bottom: 1.5rem;
+}
