@@ -1,0 +1,16 @@
+<div class="card-columns">
+  <!-- 새로 만들어진 아이템 -->
+  <% item.storys.each do |x| %>
+    <%= link_to(x) do %>
+      <div class="card">
+        <%= image_tag(x.img.to_s, class: 'card-img-top img-fluid img-full') %>
+        <div class="card-block">
+          <h4 class="card-title"><strong><%= x.title %></strong></h4>
+          <p class="card-text"><%= x.content %></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </p>
+        </div>
+      <% end %>
+      </div>
+    <% end %>
+

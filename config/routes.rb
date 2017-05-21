@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :stories
   devise_for :users
-  resources :items
+  resources :items do
+    resources :stories, shallow: true
+  end
   resources :buckets
   
   root 'home#index'

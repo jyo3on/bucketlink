@@ -1,0 +1,10 @@
+<div class="container mt-4">
+  <%= form_for [@item ,@story] do |f| %>
+    <%= render partial: 'form', locals: { f: f } %>
+    <div class="text-right">
+      <%= link_to "취소", :back, class: 'btn col-3 col-md-1 btn-outline-secondary' %>
+      <%= f.submit "등록", class: 'btn col-3 col-md-1 btn-blue' %>
+    </div>
+  <% end %>
+</div>
+
