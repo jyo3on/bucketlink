@@ -38,6 +38,9 @@ ActiveRecord::Schema.define(version: 20170520114656) do
 
   create_table "stories", force: :cascade do |t|
     t.integer  "item_id"
+    t.string   "title"
+    t.text     "content"
+    t.string   "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_stories_on_item_id"
