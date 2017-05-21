@@ -4,12 +4,25 @@
 
 .cover {
   position: relative;
-  height: 400px;
+  max-height: 400px;
   overflow: hidden;
   .cover-text {
     position: absolute;
     left: 0;
-    top: 0;
+    bottom: 5%;
+    font-size: 0.9em;
     color: #fff;
+    hr {
+      border-color: #40c5ee;
+    }
+  }
+  img {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    transition: 5s transform;
+    &:hover {
+      transform: scale(1.1);
+      transition: 5s transform;
+    }
   }
 }

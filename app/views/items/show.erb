@@ -3,11 +3,37 @@
     <%= image_tag(@item.img.to_s, class: "img-full") %>
     <div class="cover-text">
       <div class="container">
-        <h2><%= @item.title %></h2>
+        <h2 class="col-12 col-md-8"><%= @item.title %></h2>
+        <hr class="col-12 col-md-4 my-2 mr-auto ml-3">
+        <p class="col-12 col-md-8 text-blue">
+          <i class="fa fa-list"></i>4 | 버킷리스트에 등록한 사람 12명 | 실천스토리 5개
+        </p>
       </div>
     </div>
   </header>
-  <main class="container">
-    <%= @item.content %>
+  <main class="container mt-4">
+   <div class="row">
+    <div class="col-12 col-md-8">
+     <div class="card card-outline-secondary mb-3 text-center">
+       <div class="card-block">
+          <p> <%= @item.content %>.</p>
+          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </div>
+        <div class="card-block">
+          <p><strong>스크랩</strong> 8회</p>
+          <span class="fa fa-facebook"></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="card card-outline-secondary mb-3 text-center">
+        <div class="card-block">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+   </div>
   </main>
 </section>
