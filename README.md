@@ -1,9 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2017년 1학기 서울대학교 기술사업화실습1 수업을 위한
 
-Things you may want to cover:
+간단한 웹서비스 목업 페이지입니다.
+
+This is a simple a static mockup of a simple web service
+
+for the 'Technology Commercialization Practice' course at Seoul National University.
+
+
+About **BucketLink**:
 
 * Ruby version
 
@@ -11,14 +17,11 @@ Things you may want to cover:
 
 * Configuration
 
-* Database creation
 
-* Database initialization
+How to check **BucketLink**
 
-* How to run the test suite
+* Do `git clone`
 
-* Services (job queues, cache servers, search engines, etc.)
+* Get the gems by `bundle install`
 
-* Deployment instructions
-
-* ...
+* run `rails server`
